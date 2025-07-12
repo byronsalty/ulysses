@@ -36,6 +36,27 @@ The name "Ulysses" comes from the **Ulysses Pact**—a decision made while ratio
 
 ---
 
+## 🚀 Usage
+
+To use Ulysses as your local DNS firewall, you need to point your system's DNS resolver to the Ulysses DNS server.
+
+### 1. Edit `/etc/resolv.conf`
+
+Add the following line at the top of your `/etc/resolv.conf` file:
+
+```
+nameserver 127.0.0.1
+```
+
+This tells your system to use the local DNS server (Ulysses) for all DNS lookups.
+
+> **Note:**
+> - The Ulysses DNS server listens on port 53 by default. Running a service on port 53 usually requires root/admin privileges.
+> - If you want to run Ulysses on a different port, you must also configure your system or use a tool like `dnsmasq` or `systemd-resolved` to forward DNS requests from port 53 to your chosen port.
+> - Some systems automatically overwrite `/etc/resolv.conf` on reboot or network changes. For persistent changes, consult your OS documentation.
+
+---
+
 ## 📐 System Diagram (Mermaid)
 
 ```mermaid

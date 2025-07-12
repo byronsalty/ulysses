@@ -18,8 +18,6 @@ defmodule UlyssesWeb.Router do
     pipe_through :browser
 
     live "/", PendingLive
-
-    live "/ulysses/pending", PendingLive
   end
 
   # Other scopes may use custom stacks.
