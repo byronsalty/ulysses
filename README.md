@@ -40,7 +40,8 @@ The name "Ulysses" comes from the **Ulysses Pact**—a decision made while ratio
 
 ```mermaid
 flowchart LR
-    A[Client / App] --> B[Ulysses DNS Server]
-    B -->|Allowed| C[Upstream DNS (1.1.1.1)]
-    B -->|Blocked| D[LiveView UI: Pending]
-    D -->|Click Allow| B
+    A[Client] --> B[Ulysses_DNS_Server]
+    B -- Allowed --> C[Upstream_DNS]
+    B -- Blocked --> D[LiveView_UI]
+    D -- Click_Allow --> B
+```
